@@ -1,5 +1,7 @@
 # soal untuk pretest-data-engineer
 
+namespace kestra = https://kestra-magang.t-dev.site/ui/namespaces/edit/argyaja
+
 ## Knowledge Base
 1. Apa yang Anda ketahui tentang Data Engineer ?
 2. Ceritakan pengalaman Anda dalam mengolah data?
