@@ -7,6 +7,16 @@
 4. Mengapa Data menjadi sesuatu yang sangat penting sekarang, dan apa dampak dari kebocoran data
 5. Apa yg anda ketahui mengenai model generative AI ? da apa saja penerapannya
 
+jawaban : 
+1. bertugas menyiapkan data yang dikoleksi dari berbagai sumber sehingga ada bisa digunakan untuk keperluan perusahaan.
+
+2. Melakukan data cleaning hasil review hotel lalu dilanjutkan dengan sentiment analysis. Melakukan data cleaning hasil tes kesehatan seseorang pasien, yang nanti digunakan untuk memprediksi apakah seseorang terkena penyakit jantung atau tidak.
+
+3. salah satu bidang ilmu komputer yang dikhususkan untuk memecahkan masalah yang bisa diselesaikan dengan kecerdasan manusia.
+
+4. Seseorang yang terkena dampak kebocoran data akan mengalami kekhawatiran terkait keamanan informasi pribadinya, contoh nya terkait finansial. Selain itu, dapat menyebabkan pencurian identitas, pemasangan ransomware dan sebagainya.
+
+5. tipe AI yang dapat membuat konten dan ide, mulai dari teks, gambar, hingga audio, berdasarkan apa yg sudah dipelajari dari konten-konten yang sudah ada. 
 
 ## Soal Coding
 studi kasus = 
