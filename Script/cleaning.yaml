@@ -1,0 +1,43 @@
+id: data_cleaning
+namespace: argyaja
+
+inputs:
+  - id: file
+    type: FILE
+
+
+tasks:
+  - id: cleaning
+    type: io.kestra.plugin.scripts.python.Script
+    inputFiles:
+      input_csv: "{{ inputs.file }}"
+
+    beforeCommands:
+      - pip install pandas
+
+    script: |
+      import pandas as pd
+      import re
+      
+
+      df = pd.read_csv('{{ inputs.file }}', na_values=['null'])
+
+      df.dropna(subset=['rating', 'reviewContent'], inplace=True)
+
+      df = df.drop_duplicates(subset=['reviewContent'])
+      
+      def clean_text(text):
+        text = text.lower()
+        text = re.sub('[^a-z A-Z 0-9-]+', ' ', text)
+        text = re.sub(r'\s+', ' ', text).strip()
+        return text
+      
+      df_sentiment = df[['reviewContent', 'rating']]
+      df_sentiment['reviewContent'] = df_sentiment['reviewContent'].apply(clean_text)
+
+      df = df.dropna(subset=['reviewContent'])
+
+      df_sentiment.to_csv('clean.csv', index=False)
+
+    outputFiles:
+      - '*.csv'
